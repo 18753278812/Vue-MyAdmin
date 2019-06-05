@@ -20,7 +20,9 @@ export default new Vuex.Store({
       setItem: (key, value) => {
         Cookies.set(key, value)
       },
-      removeItem: key => Cookies.remove(key)
+      removeItem: key => {
+        Cookies.remove(key)
+      }
     },
     paths: ['login.userinfo'] // 要持续化存储的条目
   })]

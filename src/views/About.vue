@@ -1,6 +1,7 @@
 <template>
   <div class="about">
     <h1 @click="getUserInfo">This is an about page</h1>
+    <h1 @click="loginOut">loginOut</h1>
   </div>
 </template>
 
@@ -15,6 +16,9 @@
         login().then(res => {
           this.$store.commit('SET_USERINFO', res.data)
         })
+      },
+      loginOut() {
+        this.$store.commit('USER_INFO_INIT')
       }
     }
   }
