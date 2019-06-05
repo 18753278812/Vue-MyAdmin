@@ -3,3 +3,14 @@
     <h1>This is an about page</h1>
   </div>
 </template>
+
+<script>
+import { login } from '@/api/login'
+export default {
+  created() {
+    login()
+  }
+}
+</script>
+
+
